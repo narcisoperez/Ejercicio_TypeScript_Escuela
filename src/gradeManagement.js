@@ -1,5 +1,5 @@
+// src/gradeManagement.js
 "use strict";
-// src/gradeManagement.ts
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GradeManagement = void 0;
 class GradeManagement {
@@ -8,6 +8,7 @@ class GradeManagement {
         this.courses = [];
         this.grades = [];
     }
+
     // CRUD Estudiantes
     addStudent(student) {
         this.students.push(student);
@@ -24,6 +25,7 @@ class GradeManagement {
     deleteStudent(id) {
         this.students = this.students.filter(student => student.id !== id);
     }
+
     // CRUD Cursos
     addCourse(course) {
         this.courses.push(course);
@@ -40,6 +42,7 @@ class GradeManagement {
     deleteCourse(id) {
         this.courses = this.courses.filter(course => course.id !== id);
     }
+
     // CRUD Calificaciones
     addGrade(grade) {
         this.grades.push(grade);
@@ -55,6 +58,23 @@ class GradeManagement {
     }
     deleteGrade(studentId, courseId) {
         this.grades = this.grades.filter(grade => grade.studentId !== studentId || grade.courseId !== courseId);
+    }
+
+    // Método para imprimir notas de un estudiante en particular
+    printStudentGrades(studentId) {
+        const studentGrades = this.grades.filter(grade => grade.studentId === studentId);
+        console.log(`Calificaciones del estudiante con ID ${studentId}:`);
+        studentGrades.forEach(grade => {
+            console.log(`Materia: ${grade.subject}, Nota: ${grade.score}`);
+        });
+    }
+
+    // Método para simular el envío de datos a un servidor
+    sendDataToServer() {
+        console.log("Enviando datos al servidor...");
+        console.log("Estudiantes:", JSON.stringify(this.students, null, 2));
+        console.log("Cursos:", JSON.stringify(this.courses, null, 2));
+        console.log("Calificaciones:", JSON.stringify(this.grades, null, 2));
     }
 }
 exports.GradeManagement = GradeManagement;

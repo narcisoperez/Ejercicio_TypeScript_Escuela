@@ -12,8 +12,12 @@ export interface Course {
     // Otras propiedades relevantes para el curso
 }
 
+// src/interfaces.ts
 export interface Grade {
-    id: number; // Asegúrate de que 'id' esté definido
+    id: number;
     subject: string;
     score: number;
+    studentId: number;
+    courseId: number; // Asegúrate de que esta propiedad esté aquí
 }
+
