@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "es2015"],  // Incluye el entorno DOM y ECMAScript 2015 o posterior
+    "target": "es2015",        // Asegura que TypeScript apunte a ES2015 o posterior
+    "outDir": "./dist",        // Carpeta de salida para los archivos compilados
+    "rootDir": "./src",        // Carpeta de origen de los archivos TypeScript
+    "strict": true,            // Habilita opciones de comprobación estricta
+    "esModuleInterop": true,   // Permite la interoperabilidad con módulos ES
+    "moduleResolution": "node", // O "nodenext" si es necesario
+    "skipLibCheck": true,      // Ignora la verificación de tipos en archivos de definición de biblioteca
+    "baseUrl": ".",            // La raíz del proyecto
+    "paths": {
+      "undici-types": ["node_modules/undici-types"] // Alias para la resolución de módulos
+    }
+  }
+}
