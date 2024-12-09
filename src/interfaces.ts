@@ -1,19 +1,19 @@
 // src/interfaces.ts
 
-export interface Student {
+export  Student {
     id: number; // Asegúrate de que 'id' esté definido
     name: string;
     // Otras propiedades relevantes para el estudiante
 }
 
-export interface Course {
+export  Course {
     id: number; // Asegúrate de que 'id' esté definido
     title: string;
     // Otras propiedades relevantes para el curso
 }
 
 // src/interfaces.ts
-export interface Grade {
+export  Grade {
     id: number;
     subject: string;
     score: number;
